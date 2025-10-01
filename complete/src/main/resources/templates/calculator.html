@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+</head>
+<body>
+    <h2>Калькулятор</h2>
+    <form action="/calculate" method="post">
+        <input type="text" name="expression" placeholder="Наприклад: 2+2*2">
+        <button type="submit">Обчислити</button>
+    </form>
+
+    <p th:if="${result != null}">
+        Результат: <span th:text="${result}"></span>
+    </p>
+</body>
+</html>
